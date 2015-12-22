@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @day.name %>
+</p>
+
+<p>
+  <strong>Course(s) that occur on this day:(<%= @day.name %>)</strong><br>
+  <% @day.courses.each do |course| %>
+	<%= course.name %><br>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>
